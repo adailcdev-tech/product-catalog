@@ -1,28 +1,41 @@
-# Product Catalog – Web + Mobile (React + React Native)
+# Product Catalog – Catálogo de Produtos (Web + Mobile)
 
-> Aplicação **full-stack** para listagem de produtos com **API REST real**.  
-> **Web (React + Vite)** + **Mobile (React Native + Expo)**.
+> **Aplicação full-stack com React (Web) + React Native (Mobile)** consumindo **API REST real**.  
+> Listagem, busca, detalhes e navegação completa — **pronto para produção**.
 
-![Demo Web](https://i.imgur.com/abc123.gif)  
-![Demo Mobile](https://i.imgur.com/xyz789.gif)
+![Demo Web](https://i.imgur.com/demo-web.gif)  
+![Demo Mobile](https://i.imgur.com/demo-mobile.gif)
+
+---
 
 ## Funcionalidades
-- Listagem de produtos (com paginação)
-- Detalhes do produto (`/produto/:id`)
-- Consumo de API externa com Axios
-- Navegação fluida (React Router / React Navigation)
 
-## API Utilizada
-[ProWeb API - Swagger](https://proweb.leoproti.com.br/swagger-ui/index.html)
+| Plataforma | Recursos |
+|-----------|--------|
+| **Web** | • Listagem com paginação <br> • Busca por nome <br> • Detalhes do produto (`/produto/:id`) <br> • Loading states + error handling |
+| **Mobile** | • Tela inicial com botões <br> • Lista scroll infinita <br> • Navegação com stack <br> • Deep linking |
 
-## Deploy
-- **Web**: [product-catalog.adailc.dev](https://product-catalog.adailc.dev) *(Vercel)*
-- **Mobile**: Escaneie o QR Code: [Expo Go](https://expo.dev/@adail-dev/product-catalog)
+---
 
-## Como Rodar
+## API Externa (ProWeb)
 
-### Web
-```bash
-cd web
-npm install
-npm run dev
+> **Documentação oficial:** [Swagger UI](https://proweb.leoproti.com.br/swagger-ui/index.html)
+
+- **Endpoint principal:** `GET /produtos`
+- **Parâmetros:** `page`, `size`, `nome`
+- **Resposta:** JSON com `id`, `nome`, `preco`, `imagem`, `descricao`
+
+---
+
+## Deploy ao Vivo
+
+| Plataforma | Link |
+|----------|------|
+| **Web** | [https://product-catalog.adailc.dev](https://product-catalog.adailc.dev) |
+| **Mobile** | Escaneie com **Expo Go**:  
+  ![QR Code](https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=exp://exp.host/@adail-dev/product-catalog) |
+
+---
+
+## Estrutura do Projeto
+
